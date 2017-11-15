@@ -1,0 +1,12 @@
+var $unwatchedMovies = $('.unwatched-movies').children();
+var $watchedMovies = $('.watched-movies').children();
+var selectedMovieTitle = '<%= @movie.title %>';
+
+for (i=0; i < $watchedMovies.length; i++) {
+  if ($watchedMovies[i].textContent.trim() === selectedMovieTitle) {
+    var $movie = $($watchedMovies[i]);
+    $movie.fadeOut();
+    $('.unwatched-movies').append("<%=j render 'movie', movie: @movie %>").hide().fadeIn(2000);
+    $('[data-toggle="tooltip"]').tooltip()
+  }
+}

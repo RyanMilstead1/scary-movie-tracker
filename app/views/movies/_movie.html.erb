@@ -1,0 +1,18 @@
+<div class="col-sm-6 col-md-5">
+  <div class="row align-items-center">
+    <div class="thumbnail col-sm-5">
+      <%= link_to (image_tag movie.poster.url(:thumb), class: 'image'), movie %>
+    </div>
+    <h4 class="col-sm-5"><%= movie.title %></h4>
+    <% if movie.watched? %>
+      <a href="#" class="unwatched_link" data-toggle="tooltip" data-placement="bottom" title="Unwatch">
+        <%= fa_icon "window-close-o 3x"  %>
+      </a>
+    <% else %>
+      <a href="#" class="watched_link" data-toggle="tooltip" data-placement="bottom" title="Watch">
+        <%= fa_icon "ticket 3x"  %>
+      </a>
+    <% end %>
+  </div>
+  <hr/>
+</div>

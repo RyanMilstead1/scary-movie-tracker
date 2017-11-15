@@ -1,0 +1,12 @@
+<h1>Movies I Haven't Watched Yet</h1>
+<div class="row unwatched-movies">
+  <% @unwatched_movies.each do |movie| %>
+    <%= render 'movie', movie: movie %>
+  <% end %>
+</div>
+<h1>Movies I've Watched</h1>
+<div class="row watched-movies">
+  <% @watched_movies.each do |movie| %>
+    <%= render 'movie', movie: movie %>
+  <% end %>
+</div>
