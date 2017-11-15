@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   $(".watched_link").on("click", function(e){
     e.preventDefault();
-    var title = e.toElement.parentElement.previousElementSibling.textContent;
+    var title = e.target.parentElement.previousElementSibling.textContent;
     $.ajax({
       method: "POST",
       url: "/watch-movie",
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
   $(".unwatched_link").on("click", function(e){
     e.preventDefault();
-    var title = e.toElement.parentElement.previousElementSibling.textContent;
+    var title = e.target.parentElement.previousElementSibling.textContent;
     $.ajax({
       method: "POST",
       url: "/unwatch-movie",
