@@ -1,5 +1,4 @@
 require 'csv'
-require 'byebug'
 require_relative 'imdb-scraper'
 
 CSV.foreach('db/scary-movies.csv') do |row|
